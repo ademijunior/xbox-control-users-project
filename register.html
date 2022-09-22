@@ -14,36 +14,56 @@
             <div><img src="img/logo.png"></div>
             <h2>Cadastro</h2>
             <form method="POST">
-                <input type="text" name="nomeCompleto" placeholder="Nome completo" maxlength="50" minlength="6">
-                <input type="text" name="email" placeholder="E-mail" autofocus maxlength="35" minlength="8">
-                <input type="password" name="senha" placeholder="Senha" maxlength="20" minlength="8">
+                <input type="text" id="nomeCompleto" name="nomeCompleto" placeholder="Nome completo" maxlength="50" minlength="6" autofocus>
+                <input type="text" id="email" name="email" placeholder="E-mail" maxlength="35" minlength="8">
+                <input type="password" id="senha" name="senha" placeholder="Senha" maxlength="20" minlength="8">
                 <input type="text" id="dataNascimento" name="dataNascimento" placeholder="Data de nascimento">
-                <input type="text" name="endereco" placeholder="Endereço" maxlength="50" minlength="10">
+                <input type="text" id="endereco" name="endereco" placeholder="Endereço" maxlength="50" minlength="10">
                 <input type="text" id="cep" name="cep" placeholder="CEP">
                 <input type="text" id="cpf" name="cpf" placeholder="CPF">
-                <input type="submit" value="Cadastrar">
+                <div id="termos">
+                    <input type="checkbox" id="checkBox" name="checkBox">
+                    <p>Eu li e aceito os<a href="#">termos de uso</a></p>
+                </div>
+                <input type="submit" id="cadastrar" name="cadastrar" value="Cadastrar">
             </form>
             <p>Já pussui uma conta?<a href="index.html">Faça login!</a></p>
         </div>
-            <p>Desenvolvido por @ademijunior</p>
+            <div id="copyright"><p>Desenvolvido por<a href="https://github.com/ademijunior">@ademijunior</a></p></div>
     </section>
 
+    <!--Importação do jQuery e jQuery Mask-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.mask.js"></script>
+
+    <!--Criando mascaras para os inputs-->
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#cpf').mask('000.000.000-00');
+            $('#cpf').mask('000.000.000-00')
         });
     </script>
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#dataNascimento').mask('00/00/0000');
+            $('#dataNascimento').mask('00/00/0000')
         });
     </script>
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#cep').mask('00000-000');
-        });
+            $('#cep').mask('00000-000')
+        })
+    </script>
+
+    <!--Validações-->
+    <script>
+        function registerFunc() {
+            var nomeCompleto = document.getElementById('nomeCompleto').value;
+            var email = document.getElementById('email').value;
+            var senha = document.getElementById('senha').value;
+            var dataNascimento = document.getElementById('dataNascimento').value;
+            var endereco = document.getElementById('endereco').value;
+            var cep = document.getElementById('cep').value;
+            var cpf = document.getElementById('cpf').value;
+        }
     </script>
 
 </body>

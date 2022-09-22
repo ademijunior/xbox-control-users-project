@@ -14,17 +14,26 @@
             <div><img src="img/logo.png"></div>
             <h2>Login</h2>
             <form method="POST">
-                <input type="text" name="email" placeholder="E-mail" autofocus>
-                <input type="password" name="senha" placeholder="Senha">
-                <input type="submit" value="Entrar">
+                <input type="text" id="email" name="email" placeholder="E-mail" autofocus>
+                <input type="password" id="senha" name="senha" placeholder="Senha">
+                <div id="esqueciSenha"><p><a href="#">Esqueci minha senha</a></p></div>
+                <input type="submit" id="entrar" name="entrar" value="Entrar">
             </form>
             <p>Ainda não tem uma conta?<a href="register.html">Criar conta</a></p>
         </div>
-            <p>Desenvolvido por @ademijunior</p>
+            <div id="copyright"><p>Desenvolvido por<a href="https://github.com/ademijunior">@ademijunior</a></p></div>
     </section>
 
+    <!--Importação do jQuery e do jQuery Mask-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.mask.js"></script>
+
+    <script>
+        function loginFunc() {
+            var email = document.getElementById('email').value;
+            var senha = document.getElementById('senha').value;
+        }
+    </script>
 
 </body>
 </html>
