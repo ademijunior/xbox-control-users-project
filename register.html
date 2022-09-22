@@ -14,17 +14,37 @@
             <div><img src="img/logo.png"></div>
             <h2>Cadastro</h2>
             <form method="POST">
-                <input type="text" name="nomeCompleto" placeholder="Nome completo">
-                <input type="text" name="email" placeholder="E-mail" autofocus>
-                <input type="password" name="senha" placeholder="Senha">
-                <input type="text" name="dataNascimento" placeholder="Data de nascimento">
-                <input type="text" name="endereco" placeholder="Endereço">
-                <input type="text" name="cpf" placeholder="CPF">
+                <input type="text" name="nomeCompleto" placeholder="Nome completo" maxlength="50" minlength="6">
+                <input type="text" name="email" placeholder="E-mail" autofocus maxlength="35" minlength="8">
+                <input type="password" name="senha" placeholder="Senha" maxlength="20" minlength="8">
+                <input type="text" id="dataNascimento" name="dataNascimento" placeholder="Data de nascimento">
+                <input type="text" name="endereco" placeholder="Endereço" maxlength="50" minlength="10">
+                <input type="text" id="cep" name="cep" placeholder="CEP">
+                <input type="text" id="cpf" name="cpf" placeholder="CPF">
                 <input type="submit" value="Cadastrar">
             </form>
             <p>Já pussui uma conta?<a href="index.html">Faça login!</a></p>
         </div>
             <p>Desenvolvido por @ademijunior</p>
     </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mask.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#cpf').mask('000.000.000-00');
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#dataNascimento').mask('00/00/0000');
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#cep').mask('00000-000');
+        });
+    </script>
+
 </body>
 </html>
