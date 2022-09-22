@@ -6,19 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/logo.png">
-    <title>Login</title>
+    <title>Registro</title>
 </head>
 <body>
-    <section class="area-login">
-        <div class="login">
+    <section class="area-register">
+        <div class="register">
             <div><img src="img/logo.png"></div>
-            <h2>Login</h2>
+            <h2>Cadastro</h2>
             <form method="POST">
+                <input type="text" name="nomeCompleto" placeholder="Nome completo">
                 <input type="text" name="email" placeholder="E-mail" autofocus>
                 <input type="password" name="senha" placeholder="Senha">
-                <input type="submit" value="Entrar">
+                <input type="text" name="dataNascimento" placeholder="Data de nascimento">
+                <input type="text" name="endereco" placeholder="Endereço">
+                <input type="text" name="cpf" placeholder="CPF">
+                <input type="submit" value="Cadastrar">
             </form>
-            <p>Ainda não tem uma conta?<a href="register.html">Criar conta</a></p>
+            <p>Já pussui uma conta?<a href="index.html">Faça login!</a></p>
         </div>
             <p>Desenvolvido por @ademijunior</p>
     </section>
